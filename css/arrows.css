@@ -1,0 +1,64 @@
+/* === Scroll arrows (scoped) ===========================
+   - Sin colisiones: clases y keyframes con prefijo crx-
+   - Responsive: tamaño con clamp()
+   - Accesible: respeta prefers-reduced-motion
+   - Toma el color de 'currentColor' (hereda del overlay)
+======================================================= */
+
+/* Contenedor centrado abajo del hero */
+.hero .crx-arrows {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;                /* ajuste vertical */
+  transform: translateX(-50%);
+  pointer-events: none;        /* no bloquea clicks del hero */
+  color: #fff;                 /* color de las flechas (antes amarillo) */
+}
+
+/* SVG responsivo */
+.hero .crx-arrows svg {
+  display: block;
+  width: clamp(28px, 7vw, 60px);
+  height: auto;                /* mantiene proporción */
+}
+
+/* Líneas animadas */
+.hero .crx-arrows path {
+  stroke: currentColor;        /* hereda del contenedor */
+  fill: none;
+  stroke-width: 4px;         /* grosor → ajusta este valor a tu gusto */
+  stroke-linecap: round;       /* extremos redondeados */
+  stroke-linejoin: round;      /* uniones redondeadas */
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.25)); /* contraste */
+  animation: crx-arrow 2s infinite;
+}
+
+/* Delays */
+.hero .crx-arrows .a1 { animation-delay: -1s; }
+.hero .crx-arrows .a2 { animation-delay: -0.5s; }
+.hero .crx-arrows .a3 { animation-delay: 0s; }
+
+/* Keyframes con prefijo */
+@keyframes crx-arrow {
+  0%   { opacity: 0; }
+  40%  { opacity: 1; }
+  80%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Respeto a usuarios con movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .hero .crx-arrows path { animation: none; opacity: 1; }
+}
+
+/* (Opcional) hacer clic para saltar a SERVICIOS */
+.hero .crx-scrollcue {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  pointer-events: auto;        /* habilita click */
+  text-decoration: none;
+  color: inherit;              /* usa el mismo color que .crx-arrows */
+  display: inline-block;
+}

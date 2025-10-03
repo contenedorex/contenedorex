@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <link rel="icon" href="img/favicon-4.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContenedoRex</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/arrows.css">
+
+  <!-- JS del portfolio (filtros + lightbox) -->
+  <script src="js/portfolio.js" defer></script>
+
+  <!-- JS del navbar (activa el enlace según la sección visible) -->
+  <script src="js/navbar.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <!-- H1 solo para accesibilidad/SEO -->
+    <h1 class="sr-only">ContenedoRex</h1>
+
+    <!-- Logo visible (enlace a la home) -->
+    <a href="/" class="logo" aria-label="ContenedoRex">
+      <!-- <img src="img/logo.webp" alt=""> -->
+      <img src="img/logo22.webp" alt="">
+    </a>
+
+    <!-- Toggle/hamburguesa -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="hamburger" aria-label="Abrir menú" aria-controls="site-nav" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </label>
+
+    <!-- NAV PRINCIPAL — aislado con id="site-nav" -->
+    <nav id="site-nav" aria-label="Navegación principal">
+      <a href="#INICIO">INICIO</a>
+      <a href="#SERVICIOS">SERVICIOS</a>
+      <a href="#PROYECTOS">PROYECTOS</a>
+      <a href="#CONTACTO">CONTACTO</a>
+    </nav>
+  </header>
+
+  <!-- HERO / Portada -->
+  <section id="INICIO" class="hero" aria-label="Portada">
+    <img src="img/fondoUP.webp" alt="Portada ContenedoRex" class="hero-img">
+    <!-- capa de texto encima (opcional) -->
+    <div class="hero-overlay">
+      <h2>ContenedoREX</h2>
+      <p>CONSTRUIMOS TU FUTURO PERFECTO RÁPIDO, EFICIENTE Y SOSTENIBLE</p>
+      <div class="crx-arrows" aria-hidden="true">
+        <svg viewBox="0 0 60 72" focusable="false">
+          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- SERVICIOS -->
+    <section id="SERVICIOS" class="services">
+      <h2>SERVICIOS</h2>
+      <p class="services-subtitle">
+        Con <strong>años de experiencia en el sector</strong>, ofrecemos <strong>soluciones de construcción adaptadas a cada cliente.</strong>
+        Nos encargamos de todo el proceso, <strong>garantizando eficiencia, calidad y acabados que superan tus expectativas.</strong>
+      </p>
+
+      <!-- Fila superior: 3 servicios -->
+      <div class="services-top">
+
+        <figure class="service-card">
+          <picture>
+            <source srcset="img/servicios/Co6.webp" type="image/webp">
+            <img class="service-img" src="img/servicios/Co6.webp" alt="Servicio 2">
+          </picture>
+          <figcaption>Construcción</figcaption>
+          <p class="service-desc">Construcciones nuevas y ampliaciones con unos acabados de calidad.</p>
+        </figure>
+
+        <figure class="service-card">
+          <picture>
+            <source srcset="img/servicios/Re5555.png" type="image/png">
+            <img class="service-img" src="img/servicios/Re5555.png" alt="Servicio 1">
+          </picture>
+          <figcaption>Reforma</figcaption>
+          <p class="service-desc">Reformas integrales y parciales adaptadas a tu espacio.</p>
+        </figure>
+
+        <figure class="service-card">
+          <picture>
+            <source srcset="img/servicios/De6.webp" type="image/webp">
+            <img class="service-img" src="img/servicios/De6.webp" alt="Servicio 3">
+          </picture>
+          <figcaption>Decoración</figcaption>
+          <p class="service-desc">Diseño, decoracion y soluciones a medida en interior y exterior.</p>
+        </figure>
+
+      </div>
+
+      <!-- Cuadro inferior con etiqueta y 3 en línea -->
+      <div class="services-extra">
+        <img class="services-badge" src="img/servicios/new3.png" alt="Novedad">
+
+        <p class="services-subtitle services-brand">NUESTROS ContenedoREX</p>
+        <p class="services-subtitle">
+          Tenemos el <strong>tamaño de contenedor perfecto</strong> para tu proyecto,
+          <strong>pequeños, grandes y personalizados.</strong>
+        </p>
+        <p class="services-subtitle"><strong>¡PIDE TU PRESUPUESTO SIN COMPROMISO!</strong></p>
+
+        <div class="services-extra-grid">
+          <!-- Item 6m -->
+          <div class="service-item">
+            <figure class="service-card">
+              <picture>
+                <source srcset="img/servicios/sizes/6mv.webp" type="image/webp">
+                <img class="service-img" src="img/servicios/sizes/6mv.webp" alt="Contenedor tamaño S">
+              </picture>
+              <figcaption>Longitud: 6m</figcaption>
+              <figcaption>Altura: 2.9m</figcaption>
+              <figcaption>Ancho: 2.4m</figcaption>
+            </figure>
+            <p class="service-name">VELOCIRRAPTOR</p>
+          </div>
+
+          <!-- Item 12m -->
+          <div class="service-item">
+            <figure class="service-card">
+              <picture>
+                <source srcset="img/servicios/sizes/12mv.webp" type="image/webp">
+                <img class="service-img" src="img/servicios/sizes/12mv.webp" alt="Contenedor tamaño M">
+              </picture>
+              <figcaption>Longitud: 12m</figcaption>
+              <figcaption>Altura: 2.9m</figcaption>
+              <figcaption>Ancho: 2.4m</figcaption>
+            </figure>
+            <p class="service-name">ESTEGOSAURIO</p>
+          </div>
+
+          <!-- Item Personalizado -->
+          <div class="service-item">
+            <figure class="service-card">
+              <picture>
+                <source srcset="img/servicios/sizes/custom22.png" type="image/png">
+                <img class="service-img" src="img/servicios/sizes/custom22.png" alt="Contenedor personalizado">
+              </picture>
+              <!--figcaption>TU PROYECTO Y TUS IDEAS HECHOS REALIDAD</figcaption-->
+              <figcaption>TUS IDEAS</figcaption>
+              <figcaption>Y PROYECTOS </figcaption>
+              <figcaption>HECHOS REALIDAD</figcaption>
+              <!--figcaption class="service-desc">Cuéntanos tu proyecto. Seguro que lo podemos hacer.</figcaption-->
+            </figure>
+            <p class="service-name">PERSONALIZADO</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="PROYECTOS">
+      <h2>PROYECTOS</h2>
+
+      <p class="pf-lead">
+        <strong>Selección de trabajos recientes</strong> en distintos espacios: baños, cocinas, exteriores y más.
+        <strong>Calidad, detalle y acabados duraderos.</strong>
+      </p>
+      <p class="pf-lead">
+        <strong>Más sobre nuestros proyectos en nuestro Instagram.</strong>
+      </p>
+
+      <!-- Portfolio (aislado con prefijo pf- para evitar colisiones) -->
+      <div class="pf" aria-label="Galería de trabajos">
+        <!-- Filtros -->
+        <div class="pf-filters" role="toolbar" aria-label="Filtros">
+          <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button type="button" data-filter="baños">Baños</button>
+          <button type="button" data-filter="cocinas">Cocinas</button>
+          <button type="button" data-filter="exterior">Exterior</button>
+          <button type="button" data-filter="habitaciones">Habitaciones</button>
+          <button type="button" data-filter="salones">Salones</button>
+          <button type="button" data-filter="suelos">Suelos</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="pf-grid" id="portfolio">
+          <!-- baños -->
+          <figure class="pf-card" data-cat="baños" tabindex="0">
+            <img src="img/proyectos/Ba1.webp" alt="Baño con revestimiento claro">
+            <figcaption class="pf-chip">Baños</figcaption>
+          </figure>
+
+          <figure class="pf-card" data-cat="baños" tabindex="0">
+            <img src="img/proyectos/Ba2.webp" alt="Baño con revestimiento claro">
+            <figcaption class="pf-chip">Baños</figcaption>
+          </figure>
+
+          <figure class="pf-card" data-cat="baños" tabindex="0">
+            <img src="img/proyectos/Ba3.webp" alt="Baño con revestimiento claro">
+            <figcaption class="pf-chip">Baños</figcaption>
+          </figure>
+
+          <!-- cocinas -->
+          <figure class="pf-card" data-cat="cocinas" tabindex="0">
+            <img src="img/proyectos/Co1.webp" alt="Cocina con encimera moderna">
+            <figcaption class="pf-chip">Cocinas</figcaption>
+          </figure>
+
+          <figure class="pf-card" data-cat="cocinas" tabindex="0">
+            <img src="img/proyectos/Co2.webp" alt="Cocina con encimera moderna">
+            <figcaption class="pf-chip">Cocinas</figcaption>
+          </figure>
+
+          <figure class="pf-card" data-cat="cocinas" tabindex="0">
+            <img src="img/proyectos/Co3.webp" alt="Cocina con encimera moderna">
+            <figcaption class="pf-chip">Cocinas</figcaption>
+          </figure>
+
+          <!-- exterior -->
+          <figure class="pf-card" data-cat="exterior" tabindex="0">
+            <img src="img/proyectos/Ex1.webp" alt="Proyecto exterior">
+            <figcaption class="pf-chip">Exterior</figcaption>
+          </figure>
+
+          <figure class="pf-card" data-cat="exterior" tabindex="0">
+            <img src="img/proyectos/Ex2.webp" alt="Proyecto exterior">
+            <figcaption class="pf-chip">Exterior</figcaption>
+          </figure>
+
+          <!-- habitaciones -->
+          <figure class="pf-card" data-cat="habitaciones" tabindex="0">
+            <img src="img/proyectos/Hab1.webp" alt="Habitación reformada">
+            <figcaption class="pf-chip">Habitaciones</figcaption>
+          </figure>
+
+          <figure class="pf-card" data-cat="habitaciones" tabindex="0">
+            <img src="img/proyectos/Hab2.webp" alt="Habitación reformada">
+            <figcaption class="pf-chip">Habitaciones</figcaption>
+          </figure>
+
+          <!-- salones -->
+          <figure class="pf-card" data-cat="salones" tabindex="0">
+            <img src="img/proyectos/Sa1.webp" alt="Salón moderno con luz natural">
+            <figcaption class="pf-chip">Salones</figcaption>
+          </figure>
+
+          <figure class="pf-card" data-cat="salones" tabindex="0">
+            <img src="img/proyectos/Sa2.webp" alt="Salón moderno con luz natural">
+            <figcaption class="pf-chip">Salones</figcaption>
+          </figure>
+
+          <!-- suelos -->
+          <figure class="pf-card" data-cat="suelos" tabindex="0">
+            <img src="img/proyectos/Su1.webp" alt="Suelo renovado">
+            <figcaption class="pf-chip">Suelos</figcaption>
+          </figure>
+
+          <figure class="pf-card" data-cat="suelos" tabindex="0">
+            <img src="img/proyectos/Su2.webp" alt="Suelo renovado">
+            <figcaption class="pf-chip">Suelos</figcaption>
+          </figure>
+
+          <!-- …añade más tarjetas si lo necesitas… -->
+        </div>
+
+        <!-- Lightbox -->
+        <dialog class="pf-lightbox" aria-label="Visor de imágenes" aria-modal="true">
+          <img class="pf-lightbox__img" alt="">
+          <div class="pf-lightbox__close">
+            <button class="pf-iconbtn" data-close aria-label="Cerrar (Esc)">✕</button>
+          </div>
+          <div class="pf-lightbox__nav" aria-hidden="false">
+            <button class="pf-iconbtn" data-prev aria-label="Anterior (←)">‹</button>
+            <button class="pf-iconbtn" data-next aria-label="Siguiente (→)">›</button>
+          </div>
+          <p class="pf-lightbox__caption"></p>
+        </dialog>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="CONTACTO" class="contact">
+    <div class="contact-wrap">
+      <p class="contact-cta">¿Hablamos? Estamos a un clic.</p>
+
+      <!-- Caja amarilla que abraza exactamente a los 4 botones -->
+      <div class="contact-box" role="group" aria-label="Acciones de contacto">
+        <!-- NAV del footer: independiente del header -->
+        <nav class="contact-actions" aria-label="Contacto">
+          <!-- Teléfono -->
+          <a class="contact-btn" href="tel:+34600111222">
+            <span class="contact-icon">
+              <img src="img/contacto/Telefono-B.webp" alt="" aria-hidden="true">
+            </span>
+          </a>
+
+          <!-- Correo -->
+          <a class="contact-btn" href="mailto:contenedorex@gmail.com">
+            <span class="contact-icon">
+              <img src="img/contacto/Mail-B.webp" alt="" aria-hidden="true">
+            </span>
+          </a>
+
+          <!-- WhatsApp -->
+          <a class="contact-btn" target="_blank" rel="noopener"
+             href="https://wa.me/34600111222">
+            <span class="contact-icon">
+              <img src="img/contacto/Whatsapp-B.webp" alt="" aria-hidden="true">
+            </span>
+          </a>
+
+          <!-- Instagram -->
+          <a class="contact-btn" target="_blank" rel="noopener"
+             href="https://instagram.com/contenedorex">
+            <span class="contact-icon">
+              <img src="img/contacto/Insta-B.webp" alt="" aria-hidden="true">
+            </span>
+          </a>
+        </nav>
+      </div>
+
+      <p class="contact-copy">© 2025 ContenedoRex</p>
+    </div>
+  </footer>
+</body>
+</html>

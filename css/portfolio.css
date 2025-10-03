@@ -1,0 +1,116 @@
+/* ===========================
+   PROYECTOS — Portfolio (pf-)
+   =========================== */
+
+/* ===== Encabezado de la sección ===== */
+#PROYECTOS h2{
+  text-align:center;
+  color:#017A44;
+  font-family: "NeulandInline", system-ui, sans-serif;
+  font-weight: 400;
+  /* igual que SERVICIOS: ~2.2rem → 4rem */
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: 6px;
+}
+
+/* Párrafo bajo el título */
+#PROYECTOS .pf-lead{
+  max-width: 60ch;
+  margin: 6px auto 14px;     /* centrado */
+  text-align: center;
+  color:#444;
+  font-size: clamp(.95rem, 1.1vw + .8rem, 1.05rem);
+}
+
+/* Contenedor del componente */
+#PROYECTOS .pf{
+  /* Variables locales del componente */
+  --pf-gap: 12px;
+  --pf-card-r: 12px;
+  --pf-shadow: 0 6px 18px rgba(0,0,0,.08);
+  --pf-accent: #017A44;     /* usa tu azul del HERO */
+  /*--pf-accent: #1E2D3B;*/
+  --pf-chip-bg: rgba(0,0,0,.6);
+  /* NUEVA: ancho mínimo de columna y tope visual de 4 columnas */
+  --pf-col-min: clamp(180px, 22vw, 320px);
+
+  /* El contenedor se encoge hasta 4 columnas y queda centrado */
+  max-width: calc(4 * var(--pf-col-min) + 3 * var(--pf-gap));
+  margin-inline: auto;
+}
+
+/* Filtros centrados */
+#PROYECTOS .pf-filters{
+  display:flex; gap:8px; flex-wrap:wrap; align-items:center;
+  margin: 8px 0 14px;
+  justify-content: center;          /* centrado */
+}
+#PROYECTOS .pf-filters button{
+  border:1px solid #d0d7de; background:#fff; padding:.5rem .8rem;
+  border-radius:999px; cursor:pointer; font: inherit;
+}
+#PROYECTOS .pf-filters button[aria-pressed="true"]{
+  background: var(--pf-accent); color:#fff; border-color: var(--pf-accent);
+}
+
+/* Grid auto‑responsive y centrada */
+#PROYECTOS .pf-grid{
+  display:grid;
+  gap: var(--pf-gap);
+
+  /* Se auto‑llena de 1 a 4 columnas según ancho disponible */
+  grid-template-columns: repeat(auto-fit, minmax(var(--pf-col-min), 1fr));
+
+  /* Por si el contenedor fuera más ancho de lo debido */
+  justify-content: center;
+}
+
+/* Tarjeta */
+#PROYECTOS .pf-card{
+  position:relative; border-radius:var(--pf-card-r); overflow:hidden;
+  background:#f8fafc; box-shadow:var(--pf-shadow);
+  aspect-ratio: 4 / 3; display:block; cursor:pointer; margin:0;
+}
+#PROYECTOS .pf-card img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  transition: transform .25s ease;
+}
+#PROYECTOS .pf-card:hover img{ transform:scale(1.03); }
+#PROYECTOS .pf-chip{
+  position:absolute; left:8px; top:8px;
+  background: var(--pf-chip-bg); color:#fff; font-size:.75rem; padding:.25rem .5rem; border-radius:999px;
+}
+
+/* Ocultar por filtro */
+#PROYECTOS .is-hidden{ display:none !important; }
+
+/* Lightbox */
+#PROYECTOS .pf-lightbox{
+  position:fixed; inset:0; background:rgba(0,0,0,.8);
+  display:none; align-items:center; justify-content:center;
+  z-index:2000; padding:16px; /* > header z-index */
+}
+#PROYECTOS .pf-lightbox[open]{ display:flex; }
+#PROYECTOS .pf-lightbox__img{
+  max-width:min(96vw, 1400px);
+  max-height:80vh;
+  border-radius:12px; box-shadow:var(--pf-shadow);
+}
+#PROYECTOS .pf-lightbox__close, 
+#PROYECTOS .pf-lightbox__nav{
+  position:absolute; top:16px; display:flex; gap:8px;
+}
+#PROYECTOS .pf-lightbox__close{ right:16px; }
+#PROYECTOS .pf-lightbox__nav{
+  inset:auto; top:50%; transform:translateY(-50%);
+  width:100%; justify-content:space-between; padding-inline:12px;
+}
+#PROYECTOS .pf-iconbtn{
+  background:rgba(255,255,255,.9); border:0; border-radius:999px; width:40px; height:40px; cursor:pointer;
+  display:grid; place-items:center; font-weight:700;
+}
+#PROYECTOS .pf-iconbtn:focus{ outline:2px solid var(--pf-accent); outline-offset:2px; }
+#PROYECTOS .pf-lightbox__caption{
+  position:absolute; bottom:10px; left:0; right:0; color:#fff; text-align:center; font-size:.95rem;
+  padding:8px; text-shadow:0 1px 2px rgba(0,0,0,.6);
+}
